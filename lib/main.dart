@@ -1,16 +1,26 @@
 import 'package:flutter/material.dart';
 
+import 'pages/beranda_page.dart';
+import 'pages/order_page.dart';
+import 'talent_data.dart';
+
 void main() {
-  runApp(const MainApp());
+  runApp(const SewaSkillApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class SewaSkillApp extends StatelessWidget {
+  const SewaSkillApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(body: Center(child: Text('Hello World!'))),
+    return MaterialApp(
+      title: 'SewaSkill',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        useMaterial3: true,
+      ),
+      home: const BerandaPage(),
     );
   }
 }
